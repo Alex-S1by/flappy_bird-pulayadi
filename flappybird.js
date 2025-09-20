@@ -209,8 +209,9 @@ let openspace=(boardheight/4)+20;
 
 
 function movebird(e){
-
-  if(e.code=="Space"||e.code=="ArrowUp")
+  if(!gameover)
+  {
+    if(e.code=="Space"||e.code=="ArrowUp")
   {
      velocityy=-5;
      if (jumpSound) {
@@ -227,6 +228,10 @@ function movebird(e){
       jumpSound.play();
     }
   }
+
+  }
+
+  
 
 
 
