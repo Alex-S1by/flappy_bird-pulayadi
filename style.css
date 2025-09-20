@@ -1,0 +1,90 @@
+body {
+   margin: 0;
+   padding: 0;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   height: 100vh;
+   background: #87ceeb; /* sky blue */
+   font-family: Arial, sans-serif;
+ }
+ 
+ .game-container {
+   display: flex;
+   flex-direction: row;
+   gap: 10px;
+   align-items: flex-start;
+ }
+ 
+ /* Canvas resizes nicely */
+ #myCanvas {
+   width: 100%;
+   max-width: 680px;   /* keep reasonable size */
+   height: auto;
+   border: 2px solid #333;
+   border-radius: 8px;
+   background: #fff;
+ }
+ 
+ /* Scoreboard box */
+ .scoreboard {
+   padding: 10px 15px;
+   background: rgba(255,255,255,0.85);
+   border-radius: 12px;
+   box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+   min-width: 160px;
+
+ }
+ 
+ .scoreboard h1 {
+   margin: 0 0 10px 0;
+   font-size: 22px;
+   text-align: center;
+ }
+ 
+ .score {
+   display: flex;
+   justify-content: space-between;
+   margin: 5px 0;
+   font-size: 18px;
+   font-weight: bold;
+ }
+ 
+ /* Restart button */
+ #restart-btn {
+   margin-top: 10px;
+   padding: 10px 16px;
+   font-size: 16px;
+   font-weight: bold;
+   border: none;
+   border-radius: 8px;
+   background: #4caf50;
+   color: white;
+   cursor: pointer;
+   width: 100%;
+ }
+ 
+ #restart-btn:hover {
+   background: #45a049;
+ }
+ 
+ /* 📱 Mobile adjustments */
+ @media (max-width: 768px) {
+   .game-container {
+     flex-direction: column;
+     align-items: center;
+     
+   }
+ 
+   #myCanvas {
+     max-width: 100%;
+     min-height: 250px;
+   }
+ 
+   .scoreboard {
+     margin-top: 10px;
+     width: 90%;
+     text-align: center;
+   }
+ }
+ 
