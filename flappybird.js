@@ -33,6 +33,8 @@ let toppipeimg;
 let bottompipeimg;
 let jumpSound;
 let crashSound;
+let tickSound;
+let failSound;
 
 
 
@@ -52,8 +54,8 @@ let score=0;
 let gameover=false;
 crashSound = new Audio('./assets/jump_sound.mp3'); // replace with your sound file path
 jumpSound = new Audio('./assets/jump_sound1.mp3'); // replace with your sound file path
-
-
+tickSound = new Audio('./assets/tick_sound.mp3'); // replace with your sound file path
+failSound = new Audio('./assets/fail.mp3'); // replace with your sound file path
 
 window.onload=function(){
   scoreElement=document.getElementById("score-value");
@@ -150,7 +152,8 @@ if(bird.y>=boardheight||bird.y<=0)
     {
       score+=0.5;
       pipe.ispassed=true;
-      
+       tickSound.currentTime = 0;
+      tickSound.play();
       scoreElement.innerHTML=score;
     }
 
@@ -160,6 +163,7 @@ if(bird.y>=boardheight||bird.y<=0)
       jumpSound.pause();
        jumpSound.currentTime = 0;
       crashSound.play();
+      failSound.play();
     }
       gameover=true;
     }
@@ -215,7 +219,9 @@ function movebird(e){
   {
      velocityy=-5;
      if (jumpSound) {
-      
+       crashSound.pause();
+        failSound.pause();
+      crashSound.currentTime = 0;
       jumpSound.play();
     }
   }
@@ -224,6 +230,9 @@ function movebird(e){
   if (e.type === "click" || e.type === "touchstart") {
     velocityy = -5;
      if (jumpSound) {
+       crashSound.pause();
+        failSound.pause();
+      
       
       jumpSound.play();
     }
