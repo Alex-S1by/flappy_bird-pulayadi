@@ -40,9 +40,9 @@ let failSound;
 
 
 //move
-let velocityx=-1;
+let velocityx=-5;
 let velocityy=0;
-let gravity=0.3;
+let gravity=0.2;
 
 
 //score
