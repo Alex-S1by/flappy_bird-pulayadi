@@ -222,6 +222,7 @@ function movebird(e){
        crashSound.pause();
         failSound.pause();
       failSound.currentTime = 0;
+       crashSound.currentTime = 0;
       jumpSound.play();
     }
   }
@@ -232,7 +233,8 @@ function movebird(e){
      if (jumpSound) {
        crashSound.pause();
         failSound.pause();
-      
+       failSound.currentTime = 0;
+       crashSound.currentTime = 0;
       
       jumpSound.play();
     }
