@@ -61,6 +61,10 @@ window.onload=function(){
   scoreElement=document.getElementById("score-value");
   
   highestvalue=document.getElementById("highest-value")
+
+
+  highscore = parseInt(localStorage.getItem("flappyHighscore")) || 0;
+  highestvalue.innerHTML = highscore;
   
  
    myCanvas = document.getElementById("myCanvas");
@@ -109,8 +113,8 @@ function update(){
   if (gameover) {
     let high = parseInt(highestvalue.innerHTML) || 0; 
     let max = (score > high) ? score : high;       
+    localStorage.setItem("flappyHighscore", max);
     highestvalue.innerHTML = max;                    
- 
     
       document.getElementById("gameover-section").style.display = "block";
       document.getElementById("restart-btn").addEventListener("click",restart);
