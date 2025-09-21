@@ -40,7 +40,7 @@ let failSound;
 
 
 //move
-let velocityx=-3;
+let velocityx = -3 * (boardwidth / 1060);
 let velocityy=0;
 let gravity=0.2;
 
