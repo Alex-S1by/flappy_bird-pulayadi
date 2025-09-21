@@ -125,3 +125,20 @@ body {
 #gameover-section button:hover {
   background: #ffaa00;
 }
+
+
+.intro-text {
+  position: absolute;        /* float above other content */
+  top: 10px;                 /* distance from top */
+  left: 50%;                 /* center horizontally */
+  transform: translateX(-50%);
+  z-index: 100;              /* on top of everything */
+  background: rgba(255, 255, 255, 0.8); /* optional semi-transparent bg */
+  padding: 8px 16px;
+  border-radius: 8px;
+  text-align: center;
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #e63946;           /* highlight game name */
+  max-width: 90%;            /* responsive */
+}
