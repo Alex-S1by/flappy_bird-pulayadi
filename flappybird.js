@@ -40,7 +40,7 @@ let failSound;
 
 
 //move
-let velocityx=-5;
+let velocityx=-3.5;
 let velocityy=0;
 let gravity=0.2;
 
