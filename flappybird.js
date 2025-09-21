@@ -40,7 +40,7 @@ let failSound;
 
 
 //move
-let velocityx=-3.5;
+let velocityx=-3;
 let velocityy=0;
 let gravity=0.2;
 
@@ -97,7 +97,7 @@ birdimg.onload = function() {
 
 
   requestAnimationFrame(update)
-  setInterval(placepipe,1500)
+  setInterval(placepipe,1250)
 
   document.addEventListener("click",movebird);
   document.addEventListener("keydown",movebird);
