@@ -88,3 +88,40 @@ body {
    }
  }
  
+
+
+ /* Overlay for game over */
+#gameover-section {
+  display: none; /* hidden by default */
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: rgba(0, 0, 0, 0.8);
+  color: white;
+  text-align: center;
+  padding: 20px 40px;
+  border-radius: 12px;
+  z-index: 10;
+}
+
+#gameover-section h2 {
+  margin: 0 0 15px;
+  font-size: 2rem;
+  color: red;
+}
+
+#gameover-section button {
+  padding: 10px 20px;
+  font-size: 1rem;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  background: #ffcc00;
+  color: #000;
+  font-weight: bold;
+}
+
+#gameover-section button:hover {
+  background: #ffaa00;
+}
