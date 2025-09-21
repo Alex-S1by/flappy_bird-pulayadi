@@ -86,6 +86,9 @@ body {
      width: 90%;
      text-align: center;
    }
+   .intro-text{
+    display: none;
+   }
  }
  
 

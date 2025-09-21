@@ -97,7 +97,7 @@ birdimg.onload = function() {
 
 
   requestAnimationFrame(update)
-  setInterval(placepipe,3000)
+  setInterval(placepipe,1500)
 
   document.addEventListener("click",movebird);
   document.addEventListener("keydown",movebird);
